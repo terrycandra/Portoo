@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terry Candra — Portofolio Pribadi</title>
+  <meta name="description" content="Portofolio Terry Candra — pelajar Layanan Perbankan Syariah, administrasi, operasional, pelayanan, dan wirausaha muda.">
+  <meta name="theme-color" content="#0b5c4d">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Terry Candra — Portofolio">
+  <meta property="og:description" content="Administrasi • Operasional • Pelayanan • Wirausaha">
+  <meta property="og:url" content="https://terrycandra.my.id">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Terry Candra — Portofolio">
+  <meta name="twitter:description" content="Administrasi • Operasional • Pelayanan • Wirausaha">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%230b5c4d'/%3E%3Cpath d='M15 20h34v8H37v21h-9V28H15z' fill='white'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* Tokens and theme modes */
+    :root {
+      color-scheme: light;
+      --bg: #f4f7f4; --surface: #ffffff; --surface-2: #e9f1ec;
+      --text: #142521; --muted: #5d7068; --line: #d8e4dc;
+      --primary: #087b64; --primary-strong: #075c4c; --primary-soft: #d5eee5;
+      --accent: #c6a76a; --shadow: 0 18px 50px rgba(8,45,35,.08);
+      --radius: 24px; --nav-bg: rgba(244,247,244,.82);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) { color-scheme: dark;
+        --bg:#0d1714; --surface:#14231e; --surface-2:#1d3028; --text:#e9f3ed;
+        --muted:#a6bcb1; --line:#29443a; --primary:#55c5a5; --primary-strong:#9de2c9;
+        --primary-soft:#1d4034; --accent:#d3b77c; --shadow:0 18px 50px rgba(0,0,0,.22);
+        --nav-bg:rgba(13,23,20,.82);
+      }
+    }
+    :root[data-theme="dark"] { color-scheme:dark; --bg:#0d1714;--surface:#14231e;--surface-2:#1d3028;--text:#e9f3ed;--muted:#a6bcb1;--line:#29443a;--primary:#55c5a5;--primary-strong:#9de2c9;--primary-soft:#1d4034;--accent:#d3b77c;--shadow:0 18px 50px rgba(0,0,0,.22);--nav-bg:rgba(13,23,20,.82); }
+    :root[data-theme="light"] { color-scheme:light; --bg:#f4f7f4;--surface:#fff;--surface-2:#e9f1ec;--text:#142521;--muted:#5d7068;--line:#d8e4dc;--primary:#087b64;--primary-strong:#075c4c;--primary-soft:#d5eee5;--accent:#c6a76a;--shadow:0 18px 50px rgba(8,45,35,.08);--nav-bg:rgba(244,247,244,.82); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:100px; }
+    body { margin:0; background:var(--bg); color:var(--text); font-family:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif; line-height:1.65; transition:background .25s,color .25s; }
+    h1,h2,h3 { font-family:"Manrope","DM Sans",system-ui,sans-serif; line-height:1.18; letter-spacing:-.035em; }
+    a { color:inherit; text-decoration:none; }
+    a:hover { color:var(--primary); }
+    button { font:inherit; }
+    :focus-visible { outline:3px solid var(--accent); outline-offset:4px; border-radius:6px; }
+    .skip-link { position:absolute; left:12px; top:-80px; z-index:999; background:var(--surface); padding:12px 16px; border-radius:10px; }
+    .skip-link:focus { top:12px; }
+    .container { width:min(1120px, calc(100% - 40px)); margin-inline:auto; }
+    .nav-wrap { position:sticky; top:0; z-index:30; background:var(--nav-bg); backdrop-filter:blur(14px); border-bottom:1px solid var(--line); }
+    nav { min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { font-family:Manrope,sans-serif; font-weight:800; letter-spacing:-.04em; display:flex; align-items:center; gap:10px; }
+    .brand-mark { display:grid; place-items:center; width:36px;height:36px;border-radius:12px;background:var(--primary);color:#fff;font-weight:800; }
+    .nav-links { display:flex; gap:20px; align-items:center; font-size:.92rem; color:var(--muted); }
+    .nav-links a { padding:8px 0; }
+    .theme-btn { border:1px solid var(--line); background:var(--surface); color:var(--text); border-radius:100px; padding:9px 12px; cursor:pointer; display:flex; gap:8px; align-items:center; }
+    .hero { padding:86px 0 64px; position:relative; overflow:hidden; }
+    .hero:before { content:""; position:absolute; width:430px;height:430px;border-radius:50%;background:var(--primary-soft);filter:blur(1px);right:-190px;top:0;z-index:-1; }
+    .hero-grid { display:grid; grid-template-columns:1.5fr .8fr; gap:36px; align-items:center; }
+    .eyebrow { color:var(--primary); font-weight:700; font-size:.8rem; text-transform:uppercase; letter-spacing:.16em; display:flex; align-items:center; gap:10px; }
+    .eyebrow:before { content:""; width:24px;height:2px;background:var(--accent); }
+    h1 { font-size:clamp(3rem,8vw,6rem); margin:18px 0 16px; letter-spacing:-.07em; }
+    .hero-sub { color:var(--muted); font-size:clamp(1.05rem,2vw,1.3rem); max-width:700px; }
+    .hero-buttons { display:flex; gap:12px; flex-wrap:wrap; margin-top:30px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:9px; border-radius:100px; padding:13px 20px; border:1px solid var(--line); background:var(--surface); font-weight:700; transition:transform .18s,background .18s; }
+    .btn:hover { transform:translateY(-2px); }
+    .btn-primary { background:var(--primary); color:#fff; border-color:var(--primary); }
+    .btn-primary:hover { color:#fff; background:var(--primary-strong); }
+    .hero-card { border:1px solid var(--line); border-radius:var(--radius); padding:24px; background:var(--surface); box-shadow:var(--shadow); transform:rotate(1.5deg); }
+    .card-label { font-size:.78rem; color:var(--muted); text-transform:uppercase; letter-spacing:.13em; font-weight:700; }
+    .hero-card h2 { font-size:1.45rem; margin:8px 0; }
+    .hero-card p { color:var(--muted); margin:0; }
+    .quick-tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; }
+    .tag { border:1px solid var(--line); background:var(--surface-2); color:var(--text); border-radius:100px; padding:6px 11px; font-size:.82rem; }
+    section { padding:64px 0; }
+    .section-head { display:flex; justify-content:space-between; align-items:end; gap:20px; margin-bottom:28px; }
+    .section-head h2 { font-size:clamp(1.8rem,4vw,3rem); margin:10px 0 0; }
+    .section-head p { color:var(--muted); max-width:520px; margin:0; }
+    .timeline { display:grid; gap:14px; }
+    .exp-card { background:var(--surface); border:1px solid var(--line); border-radius:20px; overflow:hidden; transition:border-color .2s; }
+    .exp-card:hover { border-color:var(--primary); }
+    .exp-top { padding:22px 24px; display:grid; grid-template-columns:1fr auto; gap:12px; align-items:center; }
+    .exp-top h3 { margin:0; font-size:1.18rem; }
+    .exp-company { color:var(--muted); margin-top:3px; font-size:.92rem; }
+    .exp-date { color:var(--primary); font-weight:700; font-size:.82rem; white-space:nowrap; }
+    .exp-toggle { cursor:pointer; border:0; background:none; color:var(--primary); padding:12px 24px 18px; display:flex; align-items:center; gap:8px; font-weight:700; }
+    .exp-detail { padding:0 24px 24px; color:var(--muted); }
+    .exp-detail p { margin:0 0 10px; }
+    .exp-detail ul { padding-left:20px; margin:8px 0 0; }
+    .exp-detail li { margin:4px 0; }
+    .filter-row { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px; }
+    .filter { border:1px solid var(--line); border-radius:100px; background:var(--surface); padding:8px 13px; color:var(--text); cursor:pointer; font-size:.88rem; }
+    .filter[aria-pressed="true"] { background:var(--primary); color:white; border-color:var(--primary); }
+    .project-grid,.skills-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+    .project,.skill-card,.edu-card,.contact-card { background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:24px; }
+    .project-top { display:flex; justify-content:space-between; align-items:center; gap:12px; color:var(--primary); }
+    .project h3,.skill-card h3 { margin:12px 0 8px; font-size:1.25rem; }
+    .project p,.skill-card p { color:var(--muted); margin:0; }
+    .project-icon { font-size:1.7rem; }
+    .skill-card .quick-tags { margin-top:14px; }
+    .edu-card { display:flex; gap:18px; align-items:flex-start; }
+    .edu-icon { width:48px;height:48px;flex:none;display:grid;place-items:center;border-radius:15px;background:var(--primary-soft);font-size:1.4rem; }
+    .edu-card h3 { margin:0; }
+    .edu-card p { margin:5px 0 0;color:var(--muted); }
+    .contact-section { padding-bottom:84px; }
+    .contact-card { background:var(--primary-strong); color:white; padding:clamp(24px,5vw,48px); display:grid; grid-template-columns:1.3fr 1fr; gap:24px; }
+    .contact-card .eyebrow { color:#b7e6d5; }
+    .contact-card h2 { font-size:clamp(2rem,4vw,3.3rem); margin:14px 0; }
+    .contact-card p { color:#d0e8dd; }
+    .contact-links { display:grid; gap:12px; align-content:center; }
+    .contact-link { border:1px solid rgba(255,255,255,.25); border-radius:15px; padding:14px; display:flex; gap:12px; align-items:center; overflow-wrap:anywhere; }
+    .contact-link:hover { background:rgba(255,255,255,.09); color:white; }
+    footer { border-top:1px solid var(--line); padding:24px 0; color:var(--muted); font-size:.88rem; }
+    .footer-row { display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+    .reveal { opacity:1; transform:none; }
+    .js-on .reveal { opacity:0; transform:translateY(18px); transition:opacity .65s ease,transform .65s ease; }
+    .js-on .reveal.is-visible { opacity:1; transform:none; }
+    @media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; animation:none!important; transition:none!important; } .js-on .reveal { opacity:1;transform:none; } }
+    @media (max-width:800px) { .hero-grid { grid-template-columns:1fr; } .hero-card { transform:none; max-width:540px; } .nav-links { gap:12px; } .nav-links a:nth-child(2),.nav-links a:nth-child(3) { display:none; } .contact-card { grid-template-columns:1fr; } }
+    @media (max-width:600px) { .container { width:min(100% - 28px,1120px); } nav { min-height:62px; } .nav-links { font-size:.83rem; gap:10px; } .hero { padding:58px 0 36px; } section { padding:46px 0; } .section-head { align-items:start; flex-direction:column; } .exp-top { grid-template-columns:1fr; } .exp-date { white-space:normal; } .project-grid,.skills-grid { grid-template-columns:1fr; } .edu-card { padding:18px; } .contact-link { font-size:.92rem; } }
+    @media print {
+      :root { --bg:#fff;--surface:#fff;--surface-2:#f2f2f2;--text:#111;--muted:#444;--line:#ccc;--primary:#111;--primary-strong:#111;--primary-soft:#eee;--accent:#888; }
+      body { background:white!important; color:black!important; font-size:10pt; }
+      .nav-wrap,.hero-buttons,.filter-row,.exp-toggle,footer,.theme-btn { display:none!important; }
+      .container { width:100%; }
+      .hero,section { padding:14px 0; }
+      .hero-grid,.contact-card { display:block; }
+      .hero-card { display:none; }
+      .exp-card,.project,.skill-card,.edu-card,.contact-card { box-shadow:none; break-inside:avoid; border:1px solid #bbb; }
+      .exp-detail[hidden] { display:block!important; }
+      .js-on .reveal { opacity:1!important; transform:none!important; }
+      a { text-decoration:none; }
+    }
+  </style>
+</head>
+<body>
+  <!-- EDIT: Nama, profil, tautan, dan kontak utama di bagian DATA -->
+  <script>
+    /* EDIT: Data utama portofolio */
+    const DATA = {
+      name: "Terry Candra",
+      role: "Pelajar • Administrasi • Operasional • Wirausaha",
+      intro: "Saya tertarik pada pekerjaan yang memadukan ketelitian, pelayanan, operasional, dan proses bisnis.",
+      location: "Mojokerto, Indonesia",
+      email: "terrycandraw@gmail.com",
+      linkedin: "https://www.linkedin.com/in/terry-candra-3a1909404?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      website: "https://terrycandra.my.id",
+      experiences: [
+        { id:"mie", title:"Layanan Pengiriman & Operasional Support", company:"Mie Sale — Warung Kuliner Kekinian", date:"Jul 2026 – Sekarang", tags:["Operasional","Pelayanan","Komunikasi"], summary:"Mendukung operasional harian dan layanan pengiriman pesanan agar pesanan sampai tepat waktu dan tetap berkualitas.", detail:["Memeriksa kelengkapan pesanan sebelum pengiriman.","Menjaga komunikasi ramah dan solutif dengan pelanggan.","Mendukung kelancaran operasional serta ketepatan waktu layanan."] },
+        { id:"rs", title:"Praktik Kerja Lapangan (PKL) — Administrasi & Layanan", company:"Rumah Sakit Dian Husada Mojokerto", date:"Apr – Okt 2026", tags:["Administrasi","Pelayanan","Mobile JKN","Komunikasi"], summary:"Memberikan informasi kepada pasien dan membantu pendaftaran melalui Mobile JKN serta mendukung administrasi harian.", detail:["Mendampingi pasien memahami alur layanan dan penggunaan Mobile JKN.","Membantu proses pendaftaran dengan komunikatif, sabar, dan teliti.","Mendukung kegiatan administrasi rumah sakit agar tertib."] },
+        { id:"press", title:"Operator Mesin Press", company:"Produksi Sandal Rumah Tangga", date:"Des 2025", tags:["Produksi","Ketelitian","Disiplin"], summary:"Mengoperasikan mesin press sandal dengan disiplin dan ketelitian untuk menjaga presisi hasil produksi.", detail:["Menjalankan tugas produksi dengan fokus pada ketelitian dan disiplin.","Menjaga hasil pekerjaan agar sesuai proses produksi."] }
+      ],
+      projects: [
+        { icon:"🩺", title:"Pendampingan Pasien & Mobile JKN", category:"Pelayanan", desc:"Membantu pasien dan keluarga memahami alur layanan serta proses pendaftaran Mobile JKN dengan penjelasan bertahap dan ramah.", tags:["Mobile JKN","Service Excellent","Administrasi"] },
+        { icon:"📦", title:"Layanan Pengiriman Mie Sale", category:"Operasional", desc:"Mendukung pemeriksaan kelengkapan pesanan, pengiriman tepat waktu, dan komunikasi pelanggan untuk menjaga pengalaman layanan.", tags:["Operasional","Delivery","Customer Service"] },
+        { icon:"🧵", title:"Bisnis Aksesoris Kustom — Ganci Kalcer", category:"Wirausaha", desc:"Merancang dan membuat gantungan kunci handmade, mengelola bahan, produksi, serta pelayanan pesanan.", tags:["Handmade","Produksi","Kewirausahaan"] },
+        { icon:"🥟", title:"Kuliner Rumahan & Reseller", category:"Wirausaha", desc:"Pengalaman produksi dan pemasaran lumpia isi ayam, peyek, kembang goyang, serta penjualan produk sambal dan jajanan pedas.", tags:["Produksi","Penjualan","Pengelolaan Stok"] }
+      ],
+      skills: [
+        { title:"Administrasi & Perbankan", desc:"Pemahaman layanan Perbankan Syariah dan dasar proses administrasi.", tags:["Layanan Perbankan Syariah","Akad-akad"] },
+        { title:"Aplikasi & Kreatif", desc:"Penggunaan perangkat digital untuk dokumen, data, presentasi, dan materi visual.", tags:["Microsoft Word","Excel","PowerPoint","Canva","Accurate"] },
+        { title:"Pelayanan & Operasional", desc:"Mendukung alur layanan, pengelolaan pesanan, dan komunikasi dengan pengguna/pelanggan.", tags:["Service Excellent","Mobile JKN","Manajemen Pesanan"] },
+        { title:"Soft Skills", desc:"Kebiasaan kerja yang dikembangkan melalui praktik dan pengalaman.", tags:["Adaptability","Communication","Teamwork","Attention to Detail","Disiplin","Integritas"] }
+      ],
+      education: "SMK Negeri 2 Kota Mojokerto",
+      major: "Layanan Perbankan Syariah",
+      years: "2024 – 2027",
+      certifications: [] // EDIT: Tambahkan sertifikasi jika sudah dimiliki; kosong berarti tidak ditampilkan.
+    };
+  </script>
+  <a class="skip-link" href="#main">Lewati ke konten</a>
+  <!-- Sticky navigation -->
+  <div class="nav-wrap">
+    <div class="container">
+      <nav aria-label="Navigasi utama">
+        <a class="brand" href="#top"><span class="brand-mark">T</span><span>Terry Candra</span></a>
+        <div class="nav-links">
+          <a href="#experience">Pengalaman</a><a href="#projects">Proyek</a><a href="#skills">Keahlian</a><a href="#contact">Kontak</a>
+          <button class="theme-btn" id="themeToggle" type="button" aria-label="Ganti tema"><span id="themeIcon">◐</span><span>Tema</span></button>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <main id="main">
+    <!-- Hero intro -->
+    <header class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <span class="eyebrow">Creative & Operational Profile</span>
+          <h1 id="heroName">Terry Candra</h1>
+          <p class="hero-sub" id="heroIntro">Saya tertarik pada pekerjaan yang memadukan ketelitian, pelayanan, operasional, dan proses bisnis.</p>
+          <p class="hero-sub" style="font-size:.96rem" id="heroRole">Pelajar • Administrasi • Operasional • Wirausaha</p>
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="#contact">✉ Hubungi Saya</a>
+            <a class="btn" href="CV-Terry-Candra.pdf" download>↓ Download CV (PDF)</a>
+          </div>
+        </div>
+        <aside class="hero-card reveal" aria-label="Ringkasan profil">
+          <div class="card-label">Profil singkat</div>
+          <h2>Service-minded.<br>Detail-oriented.</h2>
+          <p>Siap belajar, beradaptasi, dan mendukung tim dengan sikap profesional serta integritas.</p>
+          <div class="quick-tags"><span class="tag">📍 Mojokerto</span><span class="tag">Layanan</span><span class="tag">Operasional</span><span class="tag">Bisnis</span></div>
+        </aside>
+      </div>
+    </header>
+    <!-- Experience with filter and accessible accordion -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><span class="eyebrow">Journey</span><h2>Pengalaman</h2></div>
+          <p>Pengalaman kerja dan praktik yang membentuk cara saya melayani, bekerja teliti, dan beradaptasi.</p>
+        </div>
+        <div class="filter-row reveal" aria-label="Filter pengalaman berdasarkan keahlian">
+          <button class="filter" type="button" data-filter="all" aria-pressed="true">Semua</button>
+          <button class="filter" type="button" data-filter="Operasional" aria-pressed="false">Operasional</button>
+          <button class="filter" type="button" data-filter="Pelayanan" aria-pressed="false">Pelayanan</button>
+          <button class="filter" type="button" data-filter="Administrasi" aria-pressed="false">Administrasi</button>
+          <button class="filter" type="button" data-filter="Produksi" aria-pressed="false">Produksi</button>
+        </div>
+        <div class="timeline" id="experienceList">
+          <article class="exp-card"><div class="exp-top"><div><h3>Layanan Pengiriman & Operasional Support</h3><div class="exp-company">Mie Sale — Warung Kuliner Kekinian</div></div><span class="exp-date">Jul 2026 – Sekarang</span></div><div class="exp-detail"><p>Mendukung operasional harian dan layanan pengiriman pesanan agar pesanan sampai tepat waktu dan tetap berkualitas.</p><ul><li>Memeriksa kelengkapan pesanan sebelum pengiriman.</li><li>Menjaga komunikasi ramah dengan pelanggan.</li></ul></div></article>
+          <article class="exp-card"><div class="exp-top"><div><h3>Praktik Kerja Lapangan (PKL) — Administrasi & Layanan</h3><div class="exp-company">Rumah Sakit Dian Husada Mojokerto</div></div><span class="exp-date">Apr – Okt 2026</span></div><div class="exp-detail"><p>Memberikan informasi kepada pasien dan membantu pendaftaran melalui Mobile JKN serta mendukung administrasi harian.</p><ul><li>Mendampingi pasien memahami alur layanan dan penggunaan Mobile JKN.</li><li>Membantu proses pendaftaran dengan komunikatif, sabar, dan teliti.</li></ul></div></article>
+          <article class="exp-card"><div class="exp-top"><div><h3>Operator Mesin Press</h3><div class="exp-company">Produksi Sandal Rumah Tangga</div></div><span class="exp-date">Des 2025</span></div><div class="exp-detail"><p>Mengoperasikan mesin press sandal dengan disiplin dan ketelitian untuk menjaga presisi hasil produksi.</p></div></article>
+        </div>
+      </div>
+    </section>
+    <!-- Projects -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><span class="eyebrow">Selected Work</span><h2>Proyek & Aktivitas</h2></div>
+          <p>Beberapa kegiatan, proyek praktik, dan pengalaman usaha yang relevan dengan operasional serta pelayanan.</p>
+        </div>
+        <div class="project-grid" id="projectList">
+          <article class="project"><div class="project-top"><span class="project-icon">🩺</span><span class="tag">Pelayanan</span></div><h3>Pendampingan Pasien & Mobile JKN</h3><p>Membantu pasien dan keluarga memahami alur layanan serta proses pendaftaran Mobile JKN dengan penjelasan bertahap dan ramah.</p></article>
+          <article class="project"><div class="project-top"><span class="project-icon">📦</span><span class="tag">Operasional</span></div><h3>Layanan Pengiriman Mie Sale</h3><p>Mendukung pemeriksaan kelengkapan pesanan, pengiriman tepat waktu, dan komunikasi pelanggan.</p></article>
+          <article class="project"><div class="project-top"><span class="project-icon">🧵</span><span class="tag">Wirausaha</span></div><h3>Bisnis Aksesoris Kustom — Ganci Kalcer</h3><p>Merancang dan membuat gantungan kunci handmade, mengelola bahan, produksi, serta pelayanan pesanan.</p></article>
+          <article class="project"><div class="project-top"><span class="project-icon">🥟</span><span class="tag">Wirausaha</span></div><h3>Kuliner Rumahan & Reseller</h3><p>Pengalaman produksi dan pemasaran kuliner rumahan serta penjualan produk reseller.</p></article>
+        </div>
+      </div>
+    </section>
+    <!-- Skills/tools -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><span class="eyebrow">Capabilities</span><h2>Keahlian & Alat</h2></div>
+          <p>Dasar keterampilan yang digunakan dalam aktivitas administrasi, pelayanan, operasional, dan usaha.</p>
+        </div>
+        <div class="skills-grid" id="skillsList">
+          <article class="skill-card"><h3>Administrasi & Perbankan</h3><p>Dasar layanan perbankan syariah dan administrasi.</p><div class="quick-tags"><span class="tag">Layanan Perbankan Syariah</span><span class="tag">Akad-akad</span></div></article>
+          <article class="skill-card"><h3>Aplikasi & Kreatif</h3><p>Perangkat digital untuk dokumen, data, presentasi, dan materi visual.</p><div class="quick-tags"><span class="tag">Word</span><span class="tag">Excel</span><span class="tag">PowerPoint</span><span class="tag">Canva</span><span class="tag">Accurate</span></div></article>
+          <article class="skill-card"><h3>Pelayanan & Operasional</h3><p>Mendukung alur layanan, pesanan, dan komunikasi pelanggan.</p><div class="quick-tags"><span class="tag">Service Excellent</span><span class="tag">Mobile JKN</span><span class="tag">Manajemen Pesanan</span></div></article>
+          <article class="skill-card"><h3>Soft Skills</h3><p>Kebiasaan kerja yang dikembangkan melalui praktik dan pengalaman.</p><div class="quick-tags"><span class="tag">Adaptability</span><span class="tag">Communication</span><span class="tag">Teamwork</span><span class="tag">Attention to Detail</span><span class="tag">Disiplin</span><span class="tag">Integritas</span></div></article>
+        </div>
+      </div>
+    </section>
+    <!-- Education/certificates -->
+    <section id="education">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><span class="eyebrow">Learning</span><h2>Pendidikan & Sertifikasi</h2></div>
+          <p>Informasi pendidikan formal dan sertifikasi yang tercantum pada CV.</p>
+        </div>
+        <div class="edu-card reveal">
+          <div class="edu-icon" aria-hidden="true">🎓</div>
+          <div><h3 id="eduSchool">SMK Negeri 2 Kota Mojokerto</h3><p id="eduMajor">Layanan Perbankan Syariah</p><p id="eduYears">2024 – 2027</p></div>
+        </div>
+        <div id="certList" class="skills-grid" style="margin-top:16px"></div>
+      </div>
+    </section>
+    <!-- Contact -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="contact-card reveal">
+          <div>
+            <span class="eyebrow">Let’s connect</span>
+            <h2>Terbuka untuk peluang dan kolaborasi.</h2>
+            <p>Silakan hubungi saya untuk kesempatan kerja, proyek, atau diskusi seputar administrasi, operasional, dan ide usaha.</p>
+            <p>📍 <span id="contactLocation">Mojokerto, Indonesia</span></p>
+          </div>
+          <div class="contact-links">
+            <a class="contact-link" id="emailLink" href="mailto:terrycandraw@gmail.com">✉ <span>terrycandraw@gmail.com</span></a>
+            <a class="contact-link" id="linkedinLink" href="#" target="_blank" rel="noopener noreferrer">↗ <span>LinkedIn</span></a>
+            <a class="contact-link" id="webLink" href="#" target="_blank" rel="noopener noreferrer">⌘ <span>Website</span></a>
+            <a class="contact-link" href="CV-Terry-Candra.pdf" download>↓ <span>Unduh Curriculum Vitae (PDF)</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer><div class="container footer-row"><span>© <span id="year"></span> Terry Candra</span><span>Dibuat dengan semangat belajar & berkembang.</span></div></footer>
+  <script>
+    /* Dynamic content, theme preference, accordion and filters */
+    document.documentElement.classList.add("js-on");
+    const $ = (selector) => document.querySelector(selector);
+    $("#heroName").textContent = DATA.name;
+    $("#heroIntro").textContent = DATA.intro;
+    $("#heroRole").textContent = DATA.role;
+    $("#contactLocation").textContent = DATA.location;
+    $("#emailLink").href = "mailto:" + DATA.email;
+    $("#emailLink").querySelector("span").textContent = DATA.email;
+    $("#linkedinLink").href = DATA.linkedin;
+    $("#webLink").href = DATA.website;
+    $("#webLink").querySelector("span").textContent = DATA.website.replace(/^https?:\/\//,"");
+    $("#eduSchool").textContent = DATA.education;
+    $("#eduMajor").textContent = DATA.major;
+    $("#eduYears").textContent = DATA.years;
+    $("#year").textContent = new Date().getFullYear();
+
+    const expList = $("#experienceList");
+    expList.innerHTML = ""; /* replace no-JS fallback with interactive version */
+    DATA.experiences.forEach((item,index) => {
+      const article = document.createElement("article");
+      article.className = "exp-card reveal";
+      article.dataset.tags = item.tags.join(" ");
+      const headingId = "exp-heading-" + item.id;
+      const detailId = "exp-detail-" + item.id;
+      article.innerHTML = `<div class="exp-top"><div><h3 id="${headingId}">${item.title}</h3><div class="exp-company">${item.company}</div></div><span class="exp-date">${item.date}</span></div>`;
+      const button = document.createElement("button");
+      button.className = "exp-toggle";
+      button.type = "button";
+      button.setAttribute("aria-expanded","false");
+      button.setAttribute("aria-controls",detailId);
+      button.textContent = "Lihat detail +";
+      const detail = document.createElement("div");
+      detail.className = "exp-detail";
+      detail.id = detailId;
+      detail.hidden = true;
+      detail.setAttribute("aria-labelledby",headingId);
+      detail.innerHTML = `<p>${item.summary}</p><ul>${item.detail.map(d=>`<li>${d}</li>`).join("")}</ul><div class="quick-tags">${item.tags.map(t=>`<span class="tag">${t}</span>`).join("")}</div>`;
+      button.addEventListener("click",() => {
+        const opened = button.getAttribute("aria-expanded") === "true";
+        button.setAttribute("aria-expanded",String(!opened));
+        detail.hidden = opened;
+        button.textContent = opened ? "Lihat detail +" : "Tutup detail −";
+      });
+      article.append(button,detail);
+      expList.append(article);
+    });
+
+    const projectList = $("#projectList");
+    projectList.innerHTML = ""; /* rebuild from data for JS-enabled browsers */
+    DATA.projects.forEach(p => {
+      const card = document.createElement("article");
+      card.className = "project reveal";
+      card.innerHTML = `<div class="project-top"><span class="project-icon" aria-hidden="true">${p.icon}</span><span class="tag">${p.category}</span></div><h3>${p.title}</h3><p>${p.desc}</p><div class="quick-tags">${p.tags.map(t=>`<span class="tag">${t}</span>`).join("")}</div>`;
+      projectList.append(card);
+    });
+    $("#skillsList").innerHTML = "";
+    DATA.skills.forEach(s => {
+      const card = document.createElement("article");
+      card.className = "skill-card reveal";
+      card.innerHTML = `<span class="eyebrow">Skill set</span><h3>${s.title}</h3><p>${s.desc}</p><div class="quick-tags">${s.tags.map(t=>`<span class="tag">${t}</span>`).join("")}</div>`;
+      $("#skillsList").append(card);
+    });
+    if(DATA.certifications.length) {
+      DATA.certifications.forEach(c => {
+        const card = document.createElement("article"); card.className="skill-card reveal";
+        card.innerHTML=`<h3>${c.name}</h3><p>${c.issuer || ""} ${c.year || ""}</p>`;
+        $("#certList").append(card);
+      });
+    } else {
+      const note = document.createElement("p");
+      note.className = "reveal";
+      note.style.color = "var(--muted)";
+      note.textContent = "Belum ada sertifikasi yang dicantumkan.";
+      $("#certList").append(note);
+    }
+
+    /* Experience filtering with aria-pressed states */
+    document.querySelectorAll(".filter").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const filter = btn.dataset.filter;
+        document.querySelectorAll(".filter").forEach(b => b.setAttribute("aria-pressed",String(b===btn)));
+        document.querySelectorAll(".exp-card").forEach(card => {
+          const matches = filter === "all" || card.dataset.tags.split(" ").includes(filter);
+          card.hidden = !matches;
+        });
+      });
+    });
+
+    /* Manual theme choice persisted safely; OS preference remains fallback */
+    const themeToggle = $("#themeToggle");
+    const themeIcon = $("#themeIcon");
+    function setTheme(theme) {
+      document.documentElement.dataset.theme = theme;
+      try { localStorage.setItem("terry-portfolio-theme",theme); } catch (e) { /* storage unavailable: session-only theme */ }
+      themeIcon.textContent = theme === "dark" ? "☾" : "☀";
+      themeToggle.setAttribute("aria-label",theme === "dark" ? "Aktifkan tema terang" : "Aktifkan tema gelap");
+    }
+    let savedTheme = null;
+    try { savedTheme = localStorage.getItem("terry-portfolio-theme"); } catch (e) { /* use OS theme */ }
+    if(savedTheme === "dark" || savedTheme === "light") setTheme(savedTheme);
+    else themeIcon.textContent = matchMedia("(prefers-color-scheme: dark)").matches ? "☾" : "☀";
+    themeToggle.addEventListener("click",() => {
+      const current = document.documentElement.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      setTheme(current === "dark" ? "light" : "dark");
+    });
+
+    /* Scroll reveal; reduced-motion users see content immediately */
+    const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if(!reduced && "IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+        if(entry.isIntersecting) { entry.target.classList.add("is-visible"); observer.unobserve(entry.target); }
+      }), {threshold:.12});
+      document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+    } else {
+      document.querySelectorAll(".reveal").forEach(el => el.classList.add("is-visible"));
+    }
+  </script>
+</body>
+</html>
